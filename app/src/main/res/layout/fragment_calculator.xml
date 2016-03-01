@@ -1,0 +1,309 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/overlord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/textWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2.9"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:id="@+id/resultScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/calculator_edittext_custom"
+                    android:gravity="end"
+                    android:paddingRight="15dp"
+                     android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="35sp" />
+
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonParen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="paren"
+                android:text="(    )"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonMode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_default"
+                android:text="%"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonDel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="popChar"
+                android:text="@string/delete_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonAC"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="allClear"
+                android:text="@string/AC_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_default"
+                android:onClick="insertCharToTextField"
+                android:text="@string/seven_burron"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/eight_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/nine_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/add_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/four_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/five_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/six_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonSub"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/substract_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/one_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/two_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/three_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonMult"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/multiply_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDot"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/dot_button"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/zero_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="parseResult"
+                android:text="@string/equal_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:background="@drawable/calc_button_custom"
+                android:onClick="insertCharToTextField"
+                android:text="@string/division_button"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

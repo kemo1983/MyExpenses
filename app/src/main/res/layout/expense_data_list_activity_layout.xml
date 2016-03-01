@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ke.myexpenses"
+    tools:showIn="@layout/data_list_activity">
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/my_expenses"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/expense_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_expense"
+        android:id="@+id/add_new_expense"
+        android:onClick="onclickaddnewexpense"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/categoory"
+        android:id="@+id/filter_category"
+        android:layout_alignBottom="@+id/add_new_expense"
+        android:layout_toRightOf="@+id/add_new_expense"
+        android:layout_toEndOf="@+id/add_new_expense"
+        android:onClick="filtercategory"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/button11"
+        android:layout_below="@+id/textView12"
+        android:layout_toRightOf="@+id/filter_category"
+        android:layout_toEndOf="@+id/filter_category"
+        android:onClick="filterdate"/>
+
+</RelativeLayout>
